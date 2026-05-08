@@ -4,10 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="541862bf-4439-4d02-b199-bfa38dcab15e" name="Changes" comment="izmainas">
-      <change afterPath="$PROJECT_DIR$/parole.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
+    <list default="true" id="541862bf-4439-4d02-b199-bfa38dcab15e" name="Changes" comment="pievienoju failu parole.py">
+      <change beforePath="$PROJECT_DIR$/parole.py" beforeDir="false" afterPath="$PROJECT_DIR$/parole.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -23,6 +21,7 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="UPDATE_TYPE" value="REBASE" />
   </component>
   <component name="GitHubPullRequestSearchHistory">{
   &quot;lastFilter&quot;: {
@@ -92,12 +91,30 @@
       <option name="project" value="LOCAL" />
       <updated>1778220219789</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="izmainas + pievienoju failu parole.py">
+      <option name="closed" value="true" />
+      <created>1778224925176</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1778224925176</updated>
+    </task>
+    <task id="LOCAL-00005" summary="pievienoju failu parole.py">
+      <option name="closed" value="true" />
+      <created>1778224972606</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1778224972606</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="jauns kods" />
     <MESSAGE value="izmainas" />
-    <option name="LAST_COMMIT_MESSAGE" value="izmainas" />
+    <MESSAGE value="izmainas + pievienoju failu parole.py" />
+    <MESSAGE value="pievienoju failu parole.py" />
+    <option name="LAST_COMMIT_MESSAGE" value="pievienoju failu parole.py" />
   </component>
 </project>

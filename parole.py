@@ -48,9 +48,7 @@ class MyApp(App):
 
     def generate_password(self, instance):
         simboli = (
-                string.ascii_letters +
-                string.digits +
-                string.punctuation
+                string.ascii_letters + string.digits + string.punctuation
         )
         parole = ""
 
