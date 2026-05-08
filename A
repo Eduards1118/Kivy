@@ -1,0 +1,96 @@
+from kivy.app import App
+from kivy.uix.boxlayout import BoxLayout
+from kivy.uix.textinput import TextInput
+from kivy.uix.button import Button
+from kivy.uix.label import Label
+
+import random
+import string
+
+
+class MyApp(App):
+
+    def build(self):
+
+        # Galvenais izkārtojums
+        layout = BoxLayout(
+            orientation='vertical',
+            padding=10,
+            spacing=10
+        )
+
+        # Teksta ievade
+        self.input_text = TextInput(
+            hint_text='Ievadi paroli',
+            multiline=False,
+            size_hint=(1, 0.2)
+        )
+
+        # Rezultāta teksts
+        self.label = Label(
+            text='Rezultāts būs šeit',
+            size_hint=(1, 0.3)
+        )
+
+        # Poga paroles ģenerēšanai
+        generate_button = Button(
+            text='Ģenerēt paroli',
+            size_hint=(1, 0.2)
+        )
+
+        generate_button.bind(on_press=self.generate_password)
+
+        # Poga paroles pārbaudei
+        check_button = Button(
+            text='Pārbaudīt paroli',
+            size_hint=(1, 0.2)
+        )
+
+        check_button.bind(on_press=self.check_password)
+
+        # Pievieno elementus logā
+        layout.add_widget(self.input_text)
+        layout.add_widget(generate_button)
+        layout.add_widget(check_button)
+        layout.add_widget(self.label)
+
+        return layout
+
+    # Funkcija paroles ģenerēšanai
+    def generate_password(self, instance):
+
+        simboli = string.ascii_letters + string.digits
+
+        parole = ""
+
+        # Izveido 8 simbolu paroli
+        for i in range(8):
+            parole += random.choice(simboli)
+
+        # Ievieto paroli teksta laukā
+        self.input_text.text = parole
+
+        # Parāda ziņu
+        self.label.text = "Parole izveidota"
+
+    # Funkcija paroles pārbaudei
+    def check_password(self, instance):
+
+        parole = self.input_text.text
+
+        # Pārbauda vai ir lielais burts
+        lielais_burts = any(burts.isupper() for burts in parole)
+
+        # Pārbauda vai ir cipars
+        cipars = any(burts.isdigit() for burts in parole)
+
+        # Rezultāts
+        if lielais_burts and cipars:
+            self.label.text = "Parole ir droša"
+        else:
+            self.label.text = "Parole nav droša"
+
+
+# Programmas palaišana
+if __name__ == '__main__':
+    MyApp().run()
